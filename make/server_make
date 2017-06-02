@@ -1,0 +1,51 @@
+#----------------------------------------------------------------------------#
+#									     #
+#									     #
+#									     #
+#                          SERVER -  MAKE FILE				     #
+#									     #
+#									     #
+#									     #
+#									     #
+#____________________________________________________________________________#
+CC = gcc
+CFLAGS = -c -Wall 
+FLAGS = -o
+INCLUDE = -I../include/
+HEADER = ../include/
+OBJ = ../obj/
+SRC = ../src/
+OUTPUT = ../bin/
+DFLAGS = -g 
+
+
+$(OUTPUT)server : $(OBJ)server_main.o $(OBJ)server_functions.o $(OBJ)server_operations.o $(OBJ)server_store.o $(OBJ)server_error.o
+	$(CC) $(FLAGS) server $(OBJ)server_main.o $(OBJ)server_functions.o $(OBJ)server_operations.o $(OBJ)server_store.o $(OBJ)server_error.o
+	mv server $(OUTPUT)
+
+$(OBJ)server_main.o : $(SRC)server_main.c $(HEADER)server_header.h
+	$(CC) $(DFLAGS) $(CFLAGS) $(SRC)server_main.c $(INCLUDE)
+	mv server_main.o $(OBJ)
+
+$(OBJ)server_functions.o : $(SRC)server_functions.c $(HEADER)server_header.h
+	$(CC) $(DFLAGS) $(CFLAGS) $(SRC)server_functions.c $(INCLUDE)
+	mv server_functions.o $(OBJ)
+
+$(OBJ)server_operations.o : $(SRC)server_operations.c $(HEADER)server_header.h
+	$(CC) $(DFLAGS) $(CFLAGS) $(SRC)server_operations.c $(INCLUDE)
+	mv server_operations.o $(OBJ)
+
+$(OBJ)server_store.o : $(SRC)server_store.c $(HEADER)server_header.h
+	$(CC) $(DFLAGS) $(CFLAGS) $(SRC)server_store.c $(INCLUDE)
+	mv server_store.o $(OBJ)
+
+$(OBJ)server_error.o : $(SRC)server_error.c $(HEADER)server_header.h
+	$(CC) $(DFLAGS) $(CFLAGS) $(SRC)server_error.c $(INCLUDE)
+	mv server_error.o $(OBJ)
+
+
+clean:
+	rm $(OUTPUT)server
+	rm $(OBJ)*.o
+
+

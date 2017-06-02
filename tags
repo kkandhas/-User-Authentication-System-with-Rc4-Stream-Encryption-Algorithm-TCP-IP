@@ -1,0 +1,99 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+_CLIENT_H	include\client_header.h	3;"	d
+MAX	include\client_header.h	21;"	d
+SUCCESS	include\client_header.h	22;"	d
+FAILURE	include\client_header.h	23;"	d
+DIGIT	include\client_header.h	24;"	d
+ATTEMPTS	include\client_header.h	25;"	d
+MIN_LEN	include\client_header.h	26;"	d
+MAX_LEN	include\client_header.h	27;"	d
+MAXLEN	include\client_header.h	28;"	d
+STATUS_LEN	include\client_header.h	29;"	d
+ERROR	include\client_header.h	30;"	d
+REGISTER	include\client_header.h	31;"	d
+LOGIN	include\client_header.h	32;"	d
+ERROR_NONE	include\client_header.h	38;"	d
+ERROR_CRITICAL	include\client_header.h	39;"	d
+ERROR_MAJOR	include\client_header.h	40;"	d
+ERROR_MINOR	include\client_header.h	41;"	d
+C_ERROR	include\client_header.h	44;"	d
+ERROR_UNEXPECTED_EOF	include\client_header.h	47;"	d
+ERROR_READ_FAILED	include\client_header.h	48;"	d
+ERROR_WRITE_FAILED	include\client_header.h	49;"	d
+ERROR_INVALID_USERNAME	include\client_header.h	50;"	d
+ERROR_INCORRECT_PASSWORD	include\client_header.h	51;"	d
+ERROR_MEMORY_ALLOCATION_FAIL	include\client_header.h	52;"	d
+ERROR_ATTEMPTS_FAILED	include\client_header.h	53;"	d
+ERROR_CONNECT_FAILED	include\client_header.h	54;"	d
+ERROR_SOCKET_FAIL	include\client_header.h	55;"	d
+_SERVER_H	include\server_header.h	2;"	d
+MAX	include\server_header.h	22;"	d
+SUCCESS	include\server_header.h	23;"	d
+FAILURE	include\server_header.h	24;"	d
+DIGIT	include\server_header.h	25;"	d
+ATTEMPTS	include\server_header.h	26;"	d
+MAXLEN	include\server_header.h	27;"	d
+BUFSIZE	include\server_header.h	28;"	d
+STATUS_LEN	include\server_header.h	29;"	d
+ERROR	include\server_header.h	30;"	d
+ERROR_NONE	include\server_header.h	34;"	d
+ERROR_CRITICAL	include\server_header.h	35;"	d
+ERROR_MAJOR	include\server_header.h	36;"	d
+ERROR_MINOR	include\server_header.h	37;"	d
+S_ERROR	include\server_header.h	40;"	d
+ERROR_UNEXPECTED_EOF	include\server_header.h	43;"	d
+ERROR_READ_FAIL	include\server_header.h	44;"	d
+ERROR_WRITE_FAIL	include\server_header.h	45;"	d
+ERROR_INVALID_USERNAME	include\server_header.h	46;"	d
+ERROR_INCORRECT_PWD	include\server_header.h	47;"	d
+ERROR_MEMORY_ALLOCATION_FAIL	include\server_header.h	48;"	d
+ERROR_ATTEMPTS_EXCEEDED	include\server_header.h	49;"	d
+ERROR_BIND_FAIL	include\server_header.h	50;"	d
+ERROR_ACCEPT_FAIL	include\server_header.h	51;"	d
+ERROR_SOCKET_FAIL	include\server_header.h	52;"	d
+node	include\server_header.h	/^typedef struct node$/;"	s
+username	include\server_header.h	/^	char *username;$/;"	m	struct:node
+password	include\server_header.h	/^	char *password;$/;"	m	struct:node
+next	include\server_header.h	/^	struct node *next;$/;"	m	struct:node	typeref:struct:node::node
+node	include\server_header.h	/^}node;$/;"	t	typeref:struct:node
+list	include\server_header.h	/^typedef struct list$/;"	s
+filename	include\server_header.h	/^	char *filename;$/;"	m	struct:list
+filepath	include\server_header.h	/^	char *filepath;$/;"	m	struct:list
+next	include\server_header.h	/^	struct list *next;$/;"	m	struct:list	typeref:struct:list::list
+list	include\server_header.h	/^}list;$/;"	t	typeref:struct:list
+g_error_level	src\client_error.c	/^int g_error_level = ERROR_MAJOR;$/;"	v
+g_error_code_to_str	src\client_error.c	/^char *g_error_code_to_str[] =$/;"	v
+ang_error	src\client_error.c	/^void ang_error($/;"	f
+myread	src\client_functions.c	/^int myread($/;"	f
+registration	src\client_functions.c	/^int registration($/;"	f
+validation	src\client_functions.c	/^int validation($/;"	f
+write_string	src\client_functions.c	/^int write_string($/;"	f
+check_length	src\client_functions.c	/^int check_length($/;"	f
+main	src\client_main.c	/^int main($/;"	f
+g_error_level	src\server_error.c	/^int g_error_level = ERROR_MAJOR;$/;"	v
+g_error_code_to_str	src\server_error.c	/^char *g_error_code_to_str[] =$/;"	v
+ang_error	src\server_error.c	/^void ang_error(int err_level,$/;"	f
+authentication	src\server_functions.c	/^int authentication($/;"	f
+access_file	src\server_functions.c	/^int access_file($/;"	f
+mywrite	src\server_functions.c	/^int  mywrite(int sd, void* buffer, int n)$/;"	f
+read_string	src\server_functions.c	/^int read_string(int fd,char *word)$/;"	f
+MYPORT	src\server_main.c	8;"	d	file:
+detail	src\server_main.c	/^node *detail[MAX];$/;"	v
+head	src\server_main.c	/^list *head = NULL;$/;"	v
+main	src\server_main.c	/^int main(int argc,char *argv[])$/;"	f
+handler	src\server_main.c	/^void handler(int sig_no)$/;"	f
+check_availability	src\server_operations.c	/^int check_availability($/;"	f
+retrieve_pwd	src\server_operations.c	/^int retrieve_pwd($/;"	f
+encrypt	src\server_operations.c	/^int encrypt($/;"	f
+swap	src\server_operations.c	/^void swap($/;"	f
+decrypt	src\server_operations.c	/^int decrypt($/;"	f
+store_path	src\server_store.c	/^int store_path($/;"	f
+hashing	src\server_store.c	/^int hashing($/;"	f
+store_db	src\server_store.c	/^int store_db($/;"	f
+deallocate_hash	src\server_store.c	/^int deallocate_hash(node *detail[MAX])$/;"	f
+deallocate	src\server_store.c	/^int deallocate(list **head)$/;"	f
