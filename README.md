@@ -1,0 +1,2 @@
+# -User-Authentication-System-with-Rc4-Stream-Encryption-Algorithm-TCP-IP
+Devised a Software to view a specified file from the Database by the Authenticated user in C. The Authentication algorithm used here was RC4 STREAM ENCRYPTION. The project was made as a client-server program where server had a simple database (Hash table) which held the files and also does the encryption and decryption part. The client and Server communicates between each other through socket read and write.
